@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.veterinaria.controllers.CitaController" spacing="10" style="-fx-padding: 20;">
+    <Text text="Agendar Cita" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10">
+        <Label text="Fecha:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <DatePicker fx:id="dpFecha" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Horario:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="cbHorario" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Mascota:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="cbMascota" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Label text="Motivo:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtMotivo" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+    
+    <Button text="Agendar Cita" onAction="#handleAgendar" 
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 5 15 5 15;"/>
+    
+    <Label fx:id="lblMessage"/>
+</VBox>
