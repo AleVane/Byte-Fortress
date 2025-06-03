@@ -25,6 +25,13 @@ style="-fx-background-color: linear-gradient(to bottom right, #2c003e, #000000);
     -fx-padding: 10 20;
     -fx-font-size: 20;
 "/>
+
+<ImageView fx:id="avatarImage" fitWidth="100" fitHeight="100">
+    <image>
+        <Image url="@img/avatar.png" />
+    </image>
+</ImageView>
+
    <!-- Campo de texto para usuario -->
         <TextField fx:id="txtUsername" promptText="Email ID" style="
             -fx-background-color: transparent;
