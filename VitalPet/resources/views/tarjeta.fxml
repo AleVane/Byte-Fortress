@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.TarjetaController" spacing="10" style="-fx-padding: 20;">
+    <Text text="Gestión de Tarjetas" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10">
+        <Label text="Tipo de Tarjeta:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="cbTipoTarjeta" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Número de Tarjeta:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtNumeroTarjeta" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Código de Seguridad:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtCodigoSeguridad" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Label text="Fecha Expiración (MM/YY):" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtFechaExpiracion" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        
+        <Label text="Meses sin intereses:" GridPane.columnIndex="0" GridPane.rowIndex="4" visible="false"/>
+        <Spinner fx:id="spMesesSinIntereses" GridPane.columnIndex="1" GridPane.rowIndex="4" visible="false"/>
+    </GridPane>
+    
+    <Button text="Validar Tarjeta" onAction="#handleValidarTarjeta" 
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 5 15 5 15;"/>
+    
+    <Label fx:id="lblMessage"/>
+</VBox>
