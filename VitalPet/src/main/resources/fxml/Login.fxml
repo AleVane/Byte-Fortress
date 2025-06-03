@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="loginPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.LoginController"
+            prefWidth="400" prefHeight="500" styleClass="glass">
+
+    <children>
+        <VBox spacing="20" alignment="CENTER" layoutX="50" layoutY="60" prefWidth="300">
+            <ImageView fx:id="avatarImagen" fitWidth="80" fitHeight="80" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="txtUsuario" promptText="Usiario" />
+            <PasswordField fx:id="txtPassword" promptText="Password" />
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <CheckBox fx:id="chkRecordar" text="Remember me" />
+                <Label text="Forgot Password?" styleClass="forgot-label" />
+            </HBox>
+            <Button fx:id="loginBoton" text="LOGIN" styleClass="login-button" />
+        </VBox>
+    </children>
+</AnchorPane>

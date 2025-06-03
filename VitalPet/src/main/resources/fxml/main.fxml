@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+ fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="Archivo">
+                <MenuItem text="Salir" onAction="#handleSalir"/>
+            </Menu>
+            <Menu text="Clientes">
+                <MenuItem text="Gestión de Clientes" onAction="#handleClientes"/>
+            </Menu>
+            <Menu text="Mascotas">
+                <MenuItem text="Gestión de Mascotas" onAction="#handleMascotas"/>
+            </Menu>
+            <Menu text="Citas">
+                <MenuItem text="Agendar Cita" onAction="#handleCitas"/>
+            </Menu>
+            <Menu text="Pagos">
+                <MenuItem text="Métodos de Pago" onAction="#handlePagos"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 20;">
+            <Label text="Bienvenido al Sistema Veterinario" style="-fx-font-size: 24;"/>
+        </StackPane>
+    </center>
+    
+    <bottom>
+        <Label fx:id="lblStatus" text="Usuario: " style="-fx-padding: 5; -fx-background-color: #f0f0f0;"/>
+    </bottom>
+</BorderPane>
