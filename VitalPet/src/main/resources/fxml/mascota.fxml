@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.MascotaController">
+   <children>
+      <Label layoutX="167.0" layoutY="79.0" text="Gestión de Mascotas">
+         <font><Font name="Franklin Gothic Medium" size="41.0" /></font>
+      </Label>
+
+      <Label layoutX="39.0" layoutY="160.0" text="Nombre: ">
+         <font><Font name="SansSerif Regular" size="20.0" /></font>
+      </Label>
+      <Label layoutX="39.0" layoutY="199.0" text="Edad:">
+         <font><Font name="SansSerif Regular" size="20.0" /></font>
+      </Label>
+      <Label layoutX="39.0" layoutY="239.0" text="Color:">
+         <font><Font name="SansSerif Regular" size="20.0" /></font>
+      </Label>
+      <Label layoutX="40.0" layoutY="276.0" text="Raza:">
+         <font><Font name="SansSerif Regular" size="20.0" /></font>
+      </Label>
+      <Label layoutX="40.0" layoutY="316.0" text="Sexo:">
+         <font><Font name="SansSerif Regular" size="20.0" /></font>
+      </Label>
+
+      <TextField fx:id="txtNombre" layoutX="137.0" layoutY="159.0" prefWidth="474.0" />
+      <TextField fx:id="txtEdad" layoutX="137.0" layoutY="198.0" />
+      <TextField fx:id="txtColor" layoutX="137.0" layoutY="238.0" />
+      <TextField fx:id="txtRaza" layoutX="137.0" layoutY="275.0" />
+
+      <ComboBox fx:id="cbSexo" layoutX="137.0" layoutY="315.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbEdad" layoutX="306.0" layoutY="198.0" prefWidth="150.0" />
+
+      <Button layoutX="30.0" layoutY="403.0" onAction="#handleGuardar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #53ec9f;" text="Siguiente" textFill="WHITE">
+         <font><Font name="Segoe UI Black" size="20.0" /></font>
+      </Button>
+
+      <Button layoutX="366.0" layoutY="403.0" onAction="#handleSalir" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #e74429;" text="Salir" textFill="WHITE">
+         <font><Font name="Segoe UI Black" size="20.0" /></font>
+      </Button>
+
+      <ImageView fitHeight="170.0" fitWidth="186.0" layoutX="456.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/img/mascotas.png" />
+         </image>
+      </ImageView>
+
+      <Label fx:id="lblMessage" layoutX="30.0" layoutY="360.0" text="" />
+      <Button layoutX="198.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleLimpiar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #837aff;" text="Limpiar" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
