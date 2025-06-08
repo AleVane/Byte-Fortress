@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" 
+     xmlns:fx="http://javafx.com/fxml/1"
+     fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.LoginController"
+     alignment="CENTER" spacing="20" 
+     style="-fx-background-color: linear-gradient(to bottom right, #2c3e50, #4ca1af); -fx-padding: 30;">
+
+    <!-- Avatar en la parte superior -->
+    <ImageView fx:id="imgAvatar" />
+    
+    <Label text="VitalPet" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #E0F7FA;"/>
+    
+    <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+        <TextField fx:id="txtUsuario" promptText="Usuario" style="-fx-pref-width: 250; -fx-background-radius: 5; -fx-border-color: #ddd; -fx-border-radius: 5;"/>
+        <PasswordField fx:id="txtPassword" promptText="Password" style="-fx-pref-width: 250; -fx-background-radius: 5; -fx-border-color: #ddd; -fx-border-radius: 5;"/>
+        
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <CheckBox fx:id="chkRemember" text="Recordar contraseña" style="-fx-text-fill: #E0F7FA;"/>
+            <!-- Hyperlink fx:id="linkForgot" text="Recuperar contraseña" style="-fx-text-fill: #B3E5FC; -fx-border-color: transparent;"/-->
+        </HBox>
+        
+        <Button fx:id="btnLogin" text="LOGIN" style="-fx-background-color: #01579B; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 250; -fx-padding: 8; -fx-background-radius: 5;"/>
+        
+        <VBox alignment="CENTER" spacing="5">
+    		<Label text="Iniciar sesion como administrador?" style="-fx-text-fill: #E0F7FA;"/>
+    		<Hyperlink fx:id="linkRegistro" text="Regístrar nuevo usuario" style="-fx-text-fill: #B3E5FC; -fx-border-color: transparent;"/>
+		</VBox>
+		
+    </VBox>
+</VBox>
