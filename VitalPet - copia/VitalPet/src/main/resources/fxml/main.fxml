@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="415.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.is.slt.ds.vitalpet.controllers.MainController">
+           
+    <top>
+        <AnchorPane prefHeight="64.0" prefWidth="622.0" style="-fx-padding: 20;">
+            <Label layoutX="115.0" layoutY="14.0" prefHeight="87.0" prefWidth="419.0" style="-fx-font-size: 32px; -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-padding: 20;" text="Sistema Veterinario" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="14.0" />       
+        </AnchorPane>
+    </top>
+    
+    <center>
+        <AnchorPane fx:id="contentArea" style="-fx-background-color: transparent;">
+            <VBox alignment="CENTER" spacing="30" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 15; -fx-padding: 40;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                <HBox alignment="CENTER" spacing="30">
+                    <Button onAction="#handleClientes" styleClass="top-button" text="Clientes" />
+                    <Button onAction="#handleMascotas" styleClass="top-button" text="Mascotas" />
+                    <Button onAction="#handleCitas" styleClass="top-button" text="Citas" />
+                </HBox>
+                
+                <HBox alignment="CENTER" spacing="30">
+                    <Button onAction="#handleSalir" styleClass="bottom-button" text="Archivo" />
+                    <Button onAction="#handlePagos" styleClass="bottom-button" text="Pagos" />
+                </HBox>            
+            </VBox>
+        </AnchorPane>
+    </center>
+    
+    <bottom>
+        <Label fx:id="lblStatus" style="-fx-padding: 5; -fx-background-color: #f0f0f0;" text="Usuario: " />
+    </bottom>
+</BorderPane>
