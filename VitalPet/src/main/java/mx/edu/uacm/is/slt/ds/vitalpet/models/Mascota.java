@@ -9,6 +9,11 @@ public class Mascota {
     private String color;
     private String sexo;
 
+    public Mascota() {}
+
+    public Mascota(String nombre) {
+        this.nombre = nombre;
+    }
     // Getters y Setters
     public int getIdMascota() { return idMascota; }
     public void setIdMascota(int idMascota) { this.idMascota = idMascota; }
@@ -27,4 +32,10 @@ public class Mascota {
     
     public String getSexo() { return sexo; }
     public void setSexo(String sexo) { this.sexo = sexo; }
+    
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
 }
